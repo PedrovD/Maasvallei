@@ -1,11 +1,11 @@
 <?php
+session_start();
 require_once 'Classes/db.connection.php';
 require_once 'Classes/db.login.php';
 $bdd = new db();
 $user = new USER($bdd->connect());
 if(isset($_POST['btn-login']))
 {
- $user = new USER();
  $uname = $_POST['gebruikersnaam'];
  $upass = $_POST['wachtwoord'];
   echo $uname. " ". $upass;
@@ -16,8 +16,8 @@ if(isset($_POST['btn-login']))
  }
  else
  {
-  $error = "Wrong Details !";
-  echo "<br>sds";
+  $error = "<br>Wrong Details !";
+  echo $error;
  } 
 }
 ?>

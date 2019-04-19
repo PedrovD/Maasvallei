@@ -37,18 +37,19 @@ class USER
           $stmt = $this->db->prepare("SELECT * FROM Personeel WHERE Voornaam=:uname LIMIT 1");
           $stmt->execute(array(':uname'=>$uname));
           $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
+          $hashAndSalt = password_hash($upass, PASSWORD_BCRYPT);
           if($stmt->rowCount() > 0)
           {
-             if(password_verify($upass, $userRow['Wachtwoord']))
+             if(password_verify($userRow['Wachtwoord'], $hashAndSalt))
              {
                 $_SESSION['user_session'] = $userRow['ID'];
                 return true;
-                echo("true");
+                
              }
              else
              {
                 return false;
-                echo("false");
+                
              }
           }
        }

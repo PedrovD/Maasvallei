@@ -9,11 +9,12 @@
 </head>
 <body>
 <?php
- /* include('Classes/db.connection.php'); // call db.class.php
+  include('Classes/db.connection.php'); // call db.class.php
   $bdd = new db();
   $bdd->connect();
-  $bdd->execute('INSERT INTO Klanten (KlantVoornaam, KlantAchternaam, Adres, Gereserveerd, DatumVanaf, DatumTot, PlaatsInDeCamping) VALUES ("firstname1", "lastname1", "pietjemanstraat 11", 1, "2019-04-18", "2019-04-24","asasasdasddasdsa")');
-*/
+  
+  //$bdd->execute('INSERT INTO Klanten (KlantVoornaam, KlantAchternaam, Adres, Gereserveerd, DatumVanaf, DatumTot, PlaatsInDeCamping) VALUES ("firstname1", "lastname1", "pietjemanstraat 11", 1, "2019-04-18", "2019-04-24","asasasdasddasdsa")');
+
   ?>
 <h2 style="text-align:center;">Inloggen</h2>
 
